@@ -34,7 +34,7 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #1c3c58;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -347,22 +347,35 @@ footer {
 
 #lead {
     position: relative;
-    height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    height: auto;
+    min-height: auto;
+    // height: 100vh;
+    // min-height: 500px;
+    // max-height: 1080px;
+    background: url(../images/ocean-ge92f0ce34_1280.jpg);
     background-size: cover;
+    background-position: 50% 50%;
     padding: 15px;
     overflow: hidden;
+    padding: 200px 15px;
 }
 
 #lead-content {
-    position: absolute;
+    // position: absolute;
     z-index: 10;
-    top: 50%;
-    left: 50%;
+    // top: 50%;
+    // left: 50%;
+    position: relative;
+    left: auto;
+    top: auto;
     transform: translate(-50%, -50%);
     text-align: center;
+
+        position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+    
 
     h1, h2 {
         margin: 0;
@@ -371,7 +384,7 @@ footer {
     h1 {
         color: #fff;
         font-weight: 900;
-        font-size: 5em;
+        font-size: 4em;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
@@ -456,6 +469,7 @@ footer {
     p {
         color: $text;
         margin: 0;
+        line-height: 1.6em;
     }
 }
 
@@ -695,8 +709,9 @@ footer {
     -------------------------------
 */
 
-#skills {
-    padding: 50px 15px;
+.skills {
+    // padding: 50px 15px;
+    margin-bottom: 15px;
     text-align: center;
 
     h2 {
@@ -713,13 +728,13 @@ footer {
 
     li {
         display: inline-block;
-        margin: 7px;
-        padding: 5px 10px;
+        margin: 3px;
+        padding: 5px;
         color: $heading;
         background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
-        font-size: 1.2em;
+        font-size: 0.9em;
     }
 }
 
@@ -904,6 +919,25 @@ footer {
         }
     }
 
+    .project-image {
+        display: none;
+    }
+
+    .project-info {
+        position: relative;
+        margin: 0;
+        padding: 30px 15px;
+        top: auto;
+        transform: none;
+        width: auto;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .project-info{
+        width: 470px;
+    }
 }
 
 // Small Devices
@@ -969,6 +1003,7 @@ footer {
         padding: 30px 15px;
         top: auto;
         transform: none;
+        width: auto;
     }
 
     footer {
